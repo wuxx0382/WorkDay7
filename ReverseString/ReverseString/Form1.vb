@@ -8,12 +8,17 @@ Public Class Form1
         st = InputBox("Please type the initial string")
 
         ' Compute the result
-        Dim result As String = ""
+        Dim result As String = "" 'accumulator
 
-
+        Dim i As Integer 'counter
+        For i = st.Length - 1 To 0 Step -1
+            Dim c As Char
+            c = st.Chars(i)
+            result = result & c
+        Next
 
         ' Report the output to the user
-        MessageBox.Show("Not implemented yet", "Result")
+        MessageBox.Show(result, "Result")
 
     End Sub
 End Class
